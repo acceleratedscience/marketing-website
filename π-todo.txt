@@ -1,0 +1,16 @@
+
+√ - Implemenet .right.offset (Callout.module.scss)
+- Make form GDPR compliant (hubspot + design extra functions)
+- Make public version with just signup form
+- Add support form (same as signup form, different form id)
+- Imagery
+- Design try: Header: take first module and make it full screen, with second module in overlap rectalngle
+- Get sitemap from Justin
+- Merge public page with private
+
+
+
+Questions:
+- How does Layout.tsx know what the children are?
+- Why am I not allowed to add className to components inside index.tsx (div works)
+- What does the docs folder do?

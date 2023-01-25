@@ -1,0 +1,56 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #161616;
+  color:#f4f4f4;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#signup-form {
+  margin-top: 3rem;
+}
+
+/* Tabs: move this into a component */
+
+.cds--tabs__nav-item--selected,
+.cds--tabs__nav-item--selected:focus,
+.cds--tabs__nav-item--selected:active {
+  font-weight: 400;
+  outline: 2px solid transparent;
+}
+
+.cds--tabs.cds--tabs--contained .cds--tabs__nav-item--selected,
+.cds--tabs .cds--tabs__nav-item--selected,
+.cds--tabs .cds--tabs__nav-item--selected:focus .cds--tabs__nav-link:focus,
+.cds--tabs .cds--tabs__nav-item--selected:active .cds--tabs__nav-link:active {
+  font-weight: 400;
+}
+
+.cds--tabs .cds--tabs__nav-link:focus,
+.cds--tabs .cds--tabs__nav-link:active,
+.cds--tab-content,
+.cds--tab-content:focus {
+  outline: none;
+  /* dig into accessiblity needs here. */
+}
+
+.cds--tabs .cds--tabs__nav-link {
+  max-width: 100%;
+}
+
+.cds--tabs,
+.cds--tabs .cds--tab--list {
+  width: 100%;
+}

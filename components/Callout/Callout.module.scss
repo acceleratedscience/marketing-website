@@ -1,0 +1,121 @@
+@use 'styles/variables' as *;
+
+.wrapper {
+	padding: 6rem 1rem;
+}
+.wrapper.snugBottom {
+	padding-bottom: 0;
+}
+
+.left {
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 6;
+}
+.right {
+	// Note: Chrome gives the following warning:
+	// "The display: block property prevents grid-column-end from having
+	// an effect. Try setting display to something other than block."
+	// But grid-column-end DOES have an effect, and if you set display: grid
+	// the layout breaks.
+	// display: grid;
+	grid-column-start: 7;
+	grid-column-end: -1;
+}
+
+.heading {
+	@include type-style('heading-04');
+	font-weight: 300;
+}
+
+.heading a {
+	text-decoration: underline;
+}
+
+.copy {
+	display: block;
+	margin-top: 1.75rem;
+	margin-right: 6rem;
+	line-height: 1.4rem;
+}
+
+.body * {
+	@include type-style('heading-03');
+	// color: white;
+}
+
+.body p {
+	margin-top: 1em;
+	// font-weight: 300;
+}
+
+.body a {
+	display: block;
+	margin-top: 3rem;
+	text-decoration: underline;
+}
+
+.body ul {
+	list-style: disc inside;
+
+	li {
+		// margin-left: $spacing-06;
+		margin-left: 0;
+	}
+
+	li:first-of-type {
+		// margin-top: $spacing-05;
+	}
+}
+
+//
+
+// Optional style settings set using a prop
+// with the same name unless specified.
+.offsetLeft {
+	margin-left: -1rem;
+}
+.offsetRight {
+	margin-right: -1rem;
+	width: calc(100% + 1rem);
+}
+.offsetLeft.offsetRight {
+	width: calc(100% + 2rem);
+}
+.limitWidth {
+	// Prop name: limitRightPanel
+	max-width: 25rem; // 400px
+}
+
+//
+
+@include breakpoint-down('md') {
+	.wrapper {
+		padding: 3rem 1rem;
+	}
+
+	.left {
+		grid-column-end: -4;
+	}
+
+	.right {
+		margin-top: 0;
+		grid-column-start: 1;
+		grid-column-end: -1;
+	}
+
+	.heading {
+		font-size: 24px;
+	}
+
+	.body,
+	.body a {
+		@include type-style('body-02');
+	}
+
+	// Optional style settings
+
+	.limitWidth {
+		max-width: none;
+	}
+}

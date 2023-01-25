@@ -1,0 +1,61 @@
+@use "styles/variables" as *;
+.wrapper {
+  padding: 6rem 1rem;
+}
+
+.grid {
+  padding-left: 1rem;
+  grid-column-start: 1;
+  grid-column-end: 16;
+  gap: 0.1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(283px, 2fr));
+  grid-auto-rows: minmax(150px, auto);
+  margin: 0 -1rem;
+}
+
+.grid a {
+  margin-top: 0;
+  text-decoration: none;
+}
+
+.card {
+  @include type-style("heading-03");
+  position: relative;
+  display: block;
+  padding: 6rem 1rem 1rem 1rem;
+  height: 14.5rem;
+  background: $layer-01;
+  transition: background 0.2s ease;
+
+  // &:hover {
+  //   background: $layer-hover-01;
+  // }
+}
+
+.heading {
+  @include type-style("heading-04");
+  padding-left: 1rem;
+  grid-column: 1 / -1;
+  margin-bottom: 3rem;
+  font-weight: normal;
+}
+
+.icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+@include breakpoint-down("md") {
+  .heading {
+    padding-left: 0;
+  }
+  .grid {
+    grid-column-end: 16;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

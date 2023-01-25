@@ -1,0 +1,177 @@
+@use 'styles/variables' as *;
+
+.container {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	flex-direction: column;
+	text-align: center;
+	width: 100%; // vw ignores potential scrollbar causing the module to be off-center
+	min-height: 80vh;
+	overflow: hidden;
+	isolation: isolate;
+	padding: 0 1rem;
+}
+
+.image {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	margin-left: -1rem;
+}
+
+.imageWrapper {
+	height: 100%;
+}
+
+.grid {
+	z-index: 1;
+	padding-bottom: 0;
+}
+
+.title {
+	@include type-style('heading-06');
+	font-weight: 300;
+	background: $background;
+	text-align: left;
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 6;
+	// border: solid 1px red;
+}
+
+.cta {
+	background: $background;
+	grid-column-start: 7;
+	grid-column-end: -1;
+	display: flex;
+	flex-direction: column;
+}
+
+.pitch {
+	@include type-style('heading-04');
+	font-weight: 300;
+	margin-bottom: 3rem;
+	height: 50%;
+	width: 80%;
+	display: block;
+	// border: solid 1px blue;
+}
+
+.actions {
+	display: flex;
+	flex-direction: row;
+	width: calc(100% + 3rem);
+	margin-left: -1rem;
+	margin-right: -2rem;
+}
+
+.action {
+	text-align: left;
+	border: none;
+	color: currentColor;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 100%;
+	background: $layer-01;
+	transition: background 0.2s ease;
+	padding: 1rem;
+
+	&:hover {
+		background: $layer-hover-01;
+		cursor: pointer;
+	}
+}
+
+.primary {
+	color: $green-70;
+	background: $green-30;
+	&:hover {
+		background: $green-20;
+	}
+}
+
+.arrow {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}
+
+.heading {
+	@include type-style('heading-03');
+	margin-bottom: 4rem;
+}
+
+@include breakpoint-down(1170px) {
+	.title {
+		@include type-style('heading-05');
+		font-weight: 300;
+	}
+}
+
+@include breakpoint-down(1000px) {
+	.pitch {
+		@include type-style('heading-03');
+	}
+}
+
+@include breakpoint-down(710px) {
+	// .title br {
+	// 	display: none;
+	// }
+}
+
+@include breakpoint-down('md') {
+	.container {
+		padding: 0;
+		padding-top: 200px;
+		height: auto;
+	}
+
+	.grid {
+		padding: 3rem;
+		padding-bottom: 0;
+	}
+
+	.title {
+		margin-bottom: 2rem;
+		grid-column-end: -4;
+	}
+
+	.pitch {
+		@include type-style('heading-03');
+		width: calc(100% / 16 * 13);
+	}
+
+	.actions {
+		margin-left: -1rem;
+		width: calc(100% + 2rem);
+	}
+
+	.cta {
+		@include type-style('heading-03');
+		font-size: 20px;
+		grid-column-start: 1;
+		grid-column-end: -1;
+	}
+	.action {
+		width: 100%;
+	}
+}
+
+@include breakpoint-down(400px) {
+	.title {
+		grid-column-end: -1;
+	}
+	.pitch {
+		width: 100%;
+	}
+	.actions {
+		flex-direction: column;
+	}
+}

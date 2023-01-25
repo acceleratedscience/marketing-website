@@ -1,0 +1,45 @@
+@use 'styles/variables' as *;
+
+.wrapper {
+	padding: 6rem 1rem;
+}
+
+.left {
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 6;
+}
+.right {
+	display: grid;
+	grid-column-start: 7;
+	grid-column-end: -1;
+}
+
+.heading {
+	font-weight: bold;
+}
+
+.icon {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+
+.list li {
+	line-height: 1.5rem;
+}
+
+@include breakpoint-down('md') {
+	.wrapper > div {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.left {
+		margin-bottom: 1rem;
+	}
+
+	// .right {
+	// 	// background: darkblue;
+	// }
+}

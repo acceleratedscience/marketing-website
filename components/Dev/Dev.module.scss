@@ -1,0 +1,35 @@
+@use 'styles/variables' as *;
+button.toggle {
+	position: fixed;
+	top: 0.5rem;
+	right: 0.5rem;
+	z-index: 8003;
+}
+
+.refGrid {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 8002;
+	pointer-events: none;
+	padding: 0 1rem;
+}
+.refGrid > div {
+	max-width: 1152px;
+	height: 100%;
+	width: 100%;
+	padding: 0 2rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	gap: 0;
+	border-left: solid 1px rgba(teal, 0.5);
+	border-right: solid 1px rgba(teal, 0.5);
+}
+.refGrid > div > div {
+	position: relative;
+	border-right: solid 1px rgba(red, 0.3);
+}
+.refGrid > div > div:first-child {
+	border-left: solid 1px rgba(red, 0.3);
+}

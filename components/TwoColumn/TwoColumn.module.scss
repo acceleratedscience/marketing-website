@@ -1,0 +1,78 @@
+@use "styles/variables" as *;
+
+.wrapper {
+  margin: 6rem auto;
+  place-content: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  grid-column-start: 1;
+  grid-column-end: 9;
+  padding: 1rem;
+}
+
+.right {
+  grid-column-start: 10;
+  grid-column-end: 17;
+  padding: 1rem;
+}
+
+.image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.heading {
+  @include type-style("heading-04");
+  font-weight: 300;
+  width: 90%;
+  margin-bottom: 2rem;
+  grid-column: 1 / 10;
+}
+
+.listItem {
+  padding: 0;
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+  color: $icon-secondary;
+}
+
+.listItem p {
+  @include type-style("heading-04");
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.iconWrapper {
+  min-width: 48px;
+  height: 48px;
+  width: 48px;
+  margin-right: 2rem;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  fill: $icon-secondary;
+}
+
+@include breakpoint-down("md") {
+  .wrapper {
+    margin-top: 3rem;
+  }
+  .left,
+  .right,
+  .heading {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: 100%;
+  }
+}
