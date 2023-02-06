@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: { unoptimized: true },
-  basePath: isProd ? '/Justin-MacNair/AD-Website' : undefined,
+  basePath: isProd ? '/acceleratedscience/marketing-website' : undefined,
   //typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if
