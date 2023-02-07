@@ -39,7 +39,7 @@ const Home: NextPage = () => {
 			<Cards headline="Prebuilt, trainable AI models for molecular discovery.">
 				<CardsCard icon={HeatMap_02}>
 					Compound Generation
-					<p>Generate new molecule designs based on target properties or target a target protein.</p>
+					<p>Generate new molecule designs based on target properties or a target protein.</p>
 				</CardsCard>
 				<CardsCard icon={SelectRange}>
 					Compound Selection
@@ -47,18 +47,18 @@ const Home: NextPage = () => {
 				</CardsCard>
 				<CardsCard icon={ErlenmeyerFlask}>
 					Compound Synthesis
-					<p>Predict retro synthetic routes and forward reactions.</p>
+					<p>Predict retrosynthetic routes and forward reactions.</p>
 				</CardsCard>
 				<CardsCard icon={Customizable}>
 					Bring Your Own
-					<p>Easily upload your model and make it available via API.</p>
+					<p>Easily upload your models and make them available via API.</p>
 				</CardsCard>
 			</Cards>
 
 			<Callout
 				background='#161616'
 				leftText='How the Discovery Platform works.'
-				leftSubText='Work from the command line using SciDK, our built-for-science developer kit.'
+				leftSubText='Write applications anywhere with SciDK, our built-for-science developer kit.'
 				offsetLeft={false}
 				offsetRight={true}
 				snugBottom={true}
@@ -221,10 +221,10 @@ const Home: NextPage = () => {
 				<CalloutBody>
 					<FeatureList>
 						<FeatureListFeature icon={Security_02}>
-							Simpler data management
+							Simple data management
 							<p>
 								Access models for discovery tasks and datasets
-								for model training through the data catalog
+								for model training through the data catalog.
 							</p>
 						</FeatureListFeature>
 						<FeatureListFeature icon={CollaborateWithTeams}>
@@ -232,7 +232,7 @@ const Home: NextPage = () => {
 							<p>
 								Train and run built-in AI and analytical models
 								with preconfigured settings, parameters, and
-								pipelines
+								pipelines.
 							</p>
 						</FeatureListFeature>
 						<FeatureListFeature icon={HighlyAvailable}>
@@ -245,7 +245,7 @@ const Home: NextPage = () => {
 							Built-in reproducibility
 							<p>
 								Automatically record experiment artifacts
-								including data tracking, versioning, and results
+								including data tracking, versioning, and results.
 							</p>
 						</FeatureListFeature>
 					</FeatureList>
