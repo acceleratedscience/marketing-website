@@ -18,6 +18,11 @@ a {
   box-sizing: border-box;
 }
 
+/* fix extra trailing space issue */
+img {
+  vertical-align: middle;
+}
+
 #signup-form {
   margin-top: 3rem;
 }
