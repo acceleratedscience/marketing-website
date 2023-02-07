@@ -54,3 +54,26 @@ a {
 .cds--tabs .cds--tab--list {
   width: 100%;
 }
+
+/* code samples */
+
+p.codesample {
+	padding: 2em;
+	color: #a7f0ba;
+	background: #333;
+	border-radius: .5em;
+	font-family: "IBM Plex Mono";
+	margin-top: 0;
+  }
+  
+  .codesample .caption {
+	display: block;
+	font-style: italic;
+	color: #ccc;
+	font-size: .75em;
+	margin-bottom: 1em;
+  }
+  
+  .caption.bump {
+	margin-top: 2em;
+  }

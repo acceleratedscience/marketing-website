@@ -4,13 +4,15 @@ import { ReactNode, ElementType, Children } from "react";
 import { ArrowRight } from "@carbon/icons-react";
 
 const Cards = ({
-  children
+  children,
+  headline
 }: {
   children: ReactNode
+  headline?: string
 }) => {
   return (
     <Grid className={styles.wrapper}>
-      <p className={styles.heading}>Run more experiments and get faster results with fewer lines of code.</p>
+      <p className={styles.heading}>{headline}</p>
       <div className={styles.grid}>{children}</div>
     </Grid>
   );

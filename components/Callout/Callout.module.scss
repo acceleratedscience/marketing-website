@@ -6,11 +6,15 @@
 .wrapper.snugBottom {
 	padding-bottom: 0;
 }
+.wrapper.snugTop {
+	padding-top: 0;
+}
 
 .left {
 	display: grid;
 	grid-column-start: 1;
 	grid-column-end: 6;
+	align-self: start;
 }
 .right {
 	// Note: Chrome gives the following warning:
@@ -26,6 +30,11 @@
 .heading {
 	@include type-style('heading-04');
 	font-weight: 300;
+}
+
+.right .heading {
+	margin-bottom: 1em;
+	display: block;
 }
 
 .heading a {
@@ -45,14 +54,14 @@
 }
 
 .body p {
-	margin-top: 1em;
+	//margin-top: 1em;
 	// font-weight: 300;
 }
 
 .body a {
 	display: block;
 	margin-top: 3rem;
-	text-decoration: underline;
+	// text-decoration: underline;
 }
 
 .body ul {
@@ -88,6 +97,59 @@
 }
 
 //
+
+// image
+.body img {
+	width: 100%;
+}
+
+// CTA
+.body, .wrapper, .right {
+	position: relative;
+}
+
+.actions {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	// margin-left: -1rem;
+	// margin-right: -2rem;
+}
+
+.actions a {
+	text-decoration: none;
+}
+
+.action {
+	text-align: left;
+	border: none;
+	// color: currentColor;
+	position: relative;
+	// display: flex;
+	// flex-direction: column;
+	display: block;
+	width: 100%;
+	height: 100%;
+	// background: $layer-01;
+	transition: background 0.2s ease;
+	padding: 1rem;
+
+	@include type-style('heading-03');
+	padding-bottom: 4rem;
+
+	color: $green-70;
+	background: $green-30;
+	&:hover {
+		background: $green-20;
+	}
+}
+
+.arrow {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}
 
 @include breakpoint-down('md') {
 	.wrapper {

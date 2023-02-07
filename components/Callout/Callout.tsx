@@ -2,6 +2,7 @@ import { Grid } from 'components/Grid'
 import { ReactNode } from 'react'
 import styles from './Callout.module.scss'
 import cx from 'classnames'
+import { ArrowRight } from '@carbon/icons-react'
 
 type Props = {
 	leftText: string
@@ -16,8 +17,9 @@ type Props = {
 	offsetLeft?: boolean // This offsets the left edge of the right panel with -1rem
 	offsetRight?: boolean // This offsets the right edge of the right panel with -1rem
 	// Removes the bottom padding of a panel
-	// --> when two panals have the same color, the gap will become too big
+	// --> when two panels have the same color, the gap will become too big
 	snugBottom?: boolean
+	snugTop?: boolean
 	// This sets a max-width to the right panel for content
 	// that doesn't look very good spread out.
 	limitRightPanel?: boolean
@@ -33,6 +35,7 @@ const Callout = ({
 	offsetLeft = false,
 	offsetRight = false,
 	snugBottom = false,
+	snugTop = false,
 	limitRightPanel = undefined,
 	...rest
 }: Props) => {
@@ -42,7 +45,8 @@ const Callout = ({
 			style={{ background, color }}
 			className={cx(
 				styles.wrapper,
-				snugBottom ? styles.snugBottom : null
+				snugBottom ? styles.snugBottom : null,
+				snugTop ? styles.snugTop : null
 			)}
 			{...rest}
 		>
@@ -65,6 +69,23 @@ const Callout = ({
 			</Grid>
 		</div>
 	)
+}
+
+export const CalloutCTA = ({ children, href }: { children: ReactNode, href: string }) => {
+	return  <div className={styles.actions}><a
+				href={href}
+				className={cx(styles.action)}
+			>
+				<span className={styles.cta}>
+					{children}
+				</span>
+
+				<ArrowRight
+					width='24'
+					height='24'
+					className={styles.arrow}
+				/>
+			</a></div>
 }
 
 export const CalloutHeading = ({ children }: { children: ReactNode }) => {

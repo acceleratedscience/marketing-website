@@ -4,14 +4,12 @@
 }
 
 .grid {
-  padding-left: 1rem;
   grid-column-start: 1;
   grid-column-end: 16;
   gap: 0.1rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(283px, 2fr));
+  grid-template-columns: repeat(4, minmax(278px, 2fr));
   grid-auto-rows: minmax(150px, auto);
-  margin: 0 -1rem;
 }
 
 .grid a {
@@ -37,7 +35,7 @@
   @include type-style("heading-04");
   padding-left: 1rem;
   grid-column: 1 / -1;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-weight: normal;
 }
 

@@ -19,8 +19,9 @@ const Hero = ({ src }: { src: StaticImageData }) => {
 			</div>
 			<Grid className={styles.grid}>
 				<div className={styles.title}>
-					Focus on science, <br />
-					not your code.
+					AI for scientific research.
+					{/* Focus on science, <br />
+					not your code. */}
 				</div>
 				<div className={styles.cta}>
 					<p className={styles.pitch}>
