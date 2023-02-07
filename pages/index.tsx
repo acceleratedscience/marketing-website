@@ -58,7 +58,7 @@ const Home: NextPage = () => {
 			<Callout
 				background='#161616'
 				leftText='How the Discovery Platform works.'
-				leftSubText='Work from the command line using SciDK, our built-for-science developer kit'
+				leftSubText='Work from the command line using SciDK, our built-for-science developer kit.'
 				offsetLeft={false}
 				offsetRight={true}
 				snugBottom={true}
@@ -107,7 +107,7 @@ const Home: NextPage = () => {
 				<CalloutBody>
 					<p className="codesample">
 						<span className="caption">Generate candidate molecules.</span>
-						scidk chemistry target generate -n 5
+						scidk chemistry target generate PaccMannVAE -n 5
 						<span className="caption bump">Results:<br />
 						CN(Cc1cccc(c1)C(=O)c1cc(C)c2)cc1O2<br />
 						O=NO<br />
@@ -139,8 +139,8 @@ const Home: NextPage = () => {
 
 			<Callout
 				background='#333333'
-				leftText='Accelerate chemical synthesis.'
-				leftSubText='Use AI to predict outcomes of chemical reactions for optimized synthesis methods, and to automatically generate chemical procedures for use in manual or automated lab operations.'
+				leftText='Try chemical synthesis models.'
+				leftSubText='Use AI to predict outcomes of chemical reactions for optimized synthesis methods.'
 				offsetLeft={false}
 				offsetRight={true}
 				snugBottom={false}
@@ -149,7 +149,7 @@ const Home: NextPage = () => {
 					<img src="https://rxn.app.accelerate.science/images/rxn-app.png" alt="RXN app screenshot" />
 				</CalloutBody>
 				
-				<CalloutCTA href="https://rxn.app.accelerate.science/">Try RXN</CalloutCTA>
+				<CalloutCTA href="https://rxn.app.accelerate.science/">Get Started</CalloutCTA>
 			</Callout>
 
 			{/*<Callout
