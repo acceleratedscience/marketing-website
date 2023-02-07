@@ -48,5 +48,6 @@ export default function Dev() {
 		}
 	} else {
 		// don't show this in production
+		return null
 	}
 }
